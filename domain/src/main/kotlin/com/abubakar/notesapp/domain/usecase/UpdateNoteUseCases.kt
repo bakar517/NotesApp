@@ -15,6 +15,4 @@ class UpdateNoteUseCases @Inject constructor(
         title: String,
         description: String
     ) = notesRepository.updateNote(id, title, description).mapToDomain()
-
-    suspend fun deleteNote(id: Long) = notesRepository.deleteNote(id)
 }

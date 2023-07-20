@@ -54,4 +54,8 @@ internal class NotesRepositoryImpl @Inject constructor(
     override suspend fun deleteNote(id: Long): Boolean {
         return notesDao.delete(id) == 1
     }
+
+    override suspend fun deleteNotes(ids: List<Long>) {
+        notesDao.delete(ids)
+    }
 }
